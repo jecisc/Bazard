@@ -1,0 +1,14 @@
+{
+	"category" : "RPG-Event",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 8/15/2015 17:09",
+	"instvars" : [
+		"model" ],
+	"name" : "RPGEventHanlder",
+	"pools" : [
+		 ],
+	"super" : "OSWindowEventVisitor",
+	"type" : "normal" }

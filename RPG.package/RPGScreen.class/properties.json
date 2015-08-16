@@ -1,0 +1,14 @@
+{
+	"category" : "RPG-GUI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 8/15/2015 02:37",
+	"instvars" : [
+		"window" ],
+	"name" : "RPGScreen",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+I am something that can be display on a window.

@@ -1,0 +1,1 @@
+I am an abstract class to represent every playble character of the game. 

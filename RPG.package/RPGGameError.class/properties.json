@@ -1,0 +1,14 @@
+{
+	"category" : "RPG-Error",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 8/16/2015 19:13",
+	"instvars" : [
+		 ],
+	"name" : "RPGGameError",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

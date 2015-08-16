@@ -1,0 +1,14 @@
+{
+	"category" : "RPG-Tests-Game",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RPGLivingObjectTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "RPG-Game",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 8/16/2015 19:05",
+	"instvars" : [
+		"instanceName" ],
+	"name" : "RPGLivingObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
