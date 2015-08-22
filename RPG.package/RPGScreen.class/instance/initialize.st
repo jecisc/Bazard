@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	self newWindow
+	self newWindow.
+	scheduler := RPGScheduler newFor: self

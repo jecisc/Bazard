@@ -1,3 +1,3 @@
 visiting
-visitWindowCloseEvent: anEvent
+visitWindowCloseEvent: anEventhalt.
 	model closeGame

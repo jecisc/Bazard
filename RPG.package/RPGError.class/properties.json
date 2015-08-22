@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "CyrilFerlicot 8/16/2015 19:13",
+	"commentStamp" : "CyrilFerlicot 8/22/2015 21:09",
 	"instvars" : [
 		 ],
-	"name" : "RPGGameError",
+	"name" : "RPGError",
 	"pools" : [
 		 ],
-	"super" : "RPGError",
+	"super" : "Error",
 	"type" : "normal" }

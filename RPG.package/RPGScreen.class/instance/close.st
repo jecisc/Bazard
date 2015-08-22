@@ -1,3 +1,4 @@
 action
 close
-	window destroy
+	window destroy.
+	scheduler destroy

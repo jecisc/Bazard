@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "CyrilFerlicot 8/15/2015 02:37",
+	"commentStamp" : "CyrilFerlicot 8/22/2015 20:15",
 	"instvars" : [
-		"window",
-		"scheduler" ],
-	"name" : "RPGScreen",
+		"screen",
+		"process" ],
+	"name" : "RPGScheduler",
 	"pools" : [
 		 ],
 	"super" : "Object",

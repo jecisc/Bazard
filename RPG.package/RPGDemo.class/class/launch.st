@@ -1,3 +1,3 @@
 demo
 launch
-	RPGModel on: RPGScreen new
+	^ RPGModel on: RPGScreen new
