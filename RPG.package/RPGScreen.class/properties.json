@@ -7,7 +7,9 @@
 	"commentStamp" : "CyrilFerlicot 8/15/2015 02:37",
 	"instvars" : [
 		"window",
-		"scheduler" ],
+		"scheduler",
+		"surface",
+		"model" ],
 	"name" : "RPGScreen",
 	"pools" : [
 		 ],

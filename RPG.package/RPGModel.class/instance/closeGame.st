@@ -1,3 +1,4 @@
 screen action
 closeGame
-	screen close
+	screen close.
+	screen := nil

@@ -2,8 +2,10 @@
 	"class" : {
 		"title" : "CyrilFerlicot 8/15/2015 02:39" },
 	"instance" : {
-		"close" : "CyrilFerlicot 8/22/2015 21:22",
+		"close" : "CyrilFerlicot 8/22/2015 23:43",
 		"eventHandler:" : "CyrilFerlicot 8/15/2015 17:01",
-		"initialize" : "CyrilFerlicot 8/22/2015 20:49",
-		"newWindow" : "CyrilFerlicot 8/18/2015 23:01",
-		"update" : "CyrilFerlicot 8/22/2015 21:15" } }
+		"initialize" : "CyrilFerlicot 8/22/2015 23:57",
+		"model:" : "CyrilFerlicot 8/23/2015 00:02",
+		"newWindow" : "CyrilFerlicot 8/22/2015 23:47",
+		"renderBackground:color:" : "CyrilFerlicot 8/23/2015 00:41",
+		"update" : "CyrilFerlicot 8/23/2015 00:16" } }

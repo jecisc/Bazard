@@ -1,3 +1,3 @@
 accessing
 newEventHandler
-	^ RPGEventHanlder for: self
+	^ RPGEventHandler for: self
