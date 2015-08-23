@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "CyrilFerlicot 8/23/2015 19:07",
+	"commentStamp" : "CyrilFerlicot 8/23/2015 16:53",
 	"instvars" : [
-		"screen" ],
-	"name" : "RPGModel",
+		 ],
+	"name" : "RPGComponent",
 	"pools" : [
 		 ],
-	"super" : "RPGComponent",
+	"super" : "Object",
 	"type" : "normal" }

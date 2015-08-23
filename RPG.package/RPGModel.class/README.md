@@ -1,1 +1,1 @@
-I am something that can be display on a window.
+I am a composition of components that represent a model to display on a screen.
