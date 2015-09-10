@@ -1,0 +1,9 @@
+std*
+*.image
+*.changes
+VM/crash.dmp
+meta-inf.ston
+package-cache/
+play-cache
+**/*~
+**/#*#
