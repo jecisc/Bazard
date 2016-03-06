@@ -1,0 +1,16 @@
+{
+	"category" : "CV",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"date",
+		"description",
+		"items" ],
+	"name" : "CVEntry",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }
