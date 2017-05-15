@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "ClementBera 8/13/2015 11:39",
+	"super" : "SmiStackInterpreter",
+	"category" : "SmiLang-stack interpreter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stackPages",
+		"indexOfCurrentStackPage"
+	],
+	"name" : "SmiStackInterpreterWithMultipleStackPages",
+	"type" : "normal"
+}

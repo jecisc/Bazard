@@ -1,0 +1,1 @@
+A ConcreteClass1Test is a test class for testing the behavior of ConcreteClass1

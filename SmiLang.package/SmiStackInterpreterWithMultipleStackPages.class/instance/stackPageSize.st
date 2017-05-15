@@ -1,0 +1,4 @@
+initialization
+stackPageSize
+
+	^ 10

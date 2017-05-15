@@ -1,0 +1,4 @@
+initialization
+numStackPages
+
+	^ 3

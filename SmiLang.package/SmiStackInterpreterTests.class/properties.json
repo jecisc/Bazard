@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SmiTests",
+	"category" : "SmiLang-tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmiStackInterpreterTests",
+	"type" : "normal"
+}

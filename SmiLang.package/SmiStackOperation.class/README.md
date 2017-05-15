@@ -1,0 +1,1 @@
+All the operations that can exist in SmiFunctions

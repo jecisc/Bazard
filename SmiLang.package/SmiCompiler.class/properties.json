@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "ClementBera 8/13/2015 11:33",
+	"super" : "Object",
+	"category" : "SmiLang-compiler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"func",
+		"tempNames",
+		"stackSize",
+		"maxStackSize"
+	],
+	"name" : "SmiCompiler",
+	"type" : "normal"
+}

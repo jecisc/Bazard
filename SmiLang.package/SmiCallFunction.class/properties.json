@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "ClementBEra 10/19/2015 10:15",
+	"super" : "SmiStackOperation",
+	"category" : "SmiLang-compiler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"function"
+	],
+	"name" : "SmiCallFunction",
+	"type" : "normal"
+}

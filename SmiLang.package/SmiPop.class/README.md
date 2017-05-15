@@ -1,0 +1,1 @@
+I represent a pop instruction. My execution pops the stack by 1.

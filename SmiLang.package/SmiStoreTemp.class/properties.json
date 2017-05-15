@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SmiTempOperation",
+	"category" : "SmiLang-compiler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmiStoreTemp",
+	"type" : "normal"
+}

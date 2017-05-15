@@ -1,0 +1,3 @@
+calls
+one
+	^ 1
