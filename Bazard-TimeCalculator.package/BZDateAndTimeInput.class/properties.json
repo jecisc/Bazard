@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WAComponent",
+	"category" : "Bazard-TimeCalculator",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"updateBlock"
+	],
+	"name" : "BZDateAndTimeInput",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "WAComponent",
+	"category" : "Bazard-TimeCalculator",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"arrivalTime",
+		"durations"
+	],
+	"name" : "BZTimeCalculatorMain",
+	"type" : "normal"
+}
