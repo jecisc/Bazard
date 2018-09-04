@@ -1,3 +1,0 @@
-rendering
-renderOn: anAthensCairoCanvas
-	self subclassResponsibility 

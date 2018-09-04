@@ -1,1 +1,0 @@
-I am a composition of components that represent a model to display on a screen.

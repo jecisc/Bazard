@@ -1,3 +1,0 @@
-I am an abstract object to represente every living things on the game as a character, a pnj, a monster etc...
-
-I can have a name call instanceName (to avoid the confusion with "name" of the object.).

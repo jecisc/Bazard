@@ -1,4 +1,0 @@
-initialization
-numStackPages
-
-	^ 3

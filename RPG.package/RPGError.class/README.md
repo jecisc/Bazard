@@ -1,1 +1,0 @@
-I am an Error of the RPG project.

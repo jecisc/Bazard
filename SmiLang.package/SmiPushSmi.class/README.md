@@ -1,1 +1,0 @@
-I represent a push Smi constant on stack. My activation pushes the Smi I hold as instance variable on the stack.

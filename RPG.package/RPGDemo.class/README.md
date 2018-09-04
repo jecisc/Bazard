@@ -1,1 +1,0 @@
-I allow to launch a demo of the game.

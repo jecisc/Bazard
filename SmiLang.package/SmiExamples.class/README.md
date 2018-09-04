@@ -1,1 +1,0 @@
-All the methods here cannot be executed in Smalltalk, they are SmiLang methods. Each method beginning by example is used in the SmiTests to validate the interpreters' behavior.

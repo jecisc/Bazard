@@ -1,3 +1,0 @@
-initialization
-stackPageSize
-	^ 50

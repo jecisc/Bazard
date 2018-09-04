@@ -1,1 +1,0 @@
-I represent a primitive operation between Smis. My activation pops the two operands from the stack and push the primitive operation result.

@@ -1,3 +1,0 @@
-accessors
-components
-	^ components ifNil: [ {} ]

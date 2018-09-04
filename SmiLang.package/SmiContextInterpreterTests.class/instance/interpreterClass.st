@@ -1,5 +1,0 @@
-helper
-interpreterClass
-	^ SmiContextInterpreter
-	
-	
