@@ -25,3 +25,7 @@ Scripts class >> downloadBooks [
 				displayingProgress: [ :u | u ] ]
 		displayingProgress: [ :novel | novel ]
 ]
+
+{ #category : #'see class side' }
+Scripts >> seeClassSide [ 
+]
