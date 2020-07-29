@@ -21,7 +21,7 @@ WeeklyDiff >> gtInspectorIn: composite [
 		display: [ :aCollection | 
 			{('Date' -> self weekPrinting)}
 				,
-					(#(#weight #bmi #fat #fatFree #subcutaneousFat #visceralFat #water #skeletalMuscle #muscleMass #boneMass #protein #bmr #metabolicAge)
+					(#(#weight #bmi #fat #fatFree #subcutaneousFat #visceralFat #water #skeletalMuscle #muscleMass #boneMass #protein #bmr #metabolicAge #fatWeight #subcuteanousFatWeight)
 						collect: [ :each | each -> (self diffFor: each) ]) ];
 		column: 'Info' evaluated: [ :each | each key ];
 		column: 'Diff'

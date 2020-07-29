@@ -81,6 +81,11 @@ DailyWeight >> fatFree: anObject [
 ]
 
 { #category : #accessing }
+DailyWeight >> fatWeight [
+	^ self weight / 100 * self fat
+]
+
+{ #category : #accessing }
 DailyWeight >> metabolicAge [
 	^ metabolicAge
 ]
@@ -137,6 +142,11 @@ DailyWeight >> subcutaneousFat [
 { #category : #accessing }
 DailyWeight >> subcutaneousFat: anObject [
 	subcutaneousFat := anObject
+]
+
+{ #category : #accessing }
+DailyWeight >> subcuteanousFatWeight [
+	^ self weight / 100 * self subcutaneousFat
 ]
 
 { #category : #accessing }

@@ -13,6 +13,25 @@ WeeklyWeight >> average: aSymbol [
 	^ (weights collect: aSymbol) average
 ]
 
+{ #category : #'as yet unclassified' }
+WeeklyWeight >> gtInspectorIn: composite [
+	<gtInspectorPresentationOrder: 1>
+	^ composite fastTable
+		title: 'Values';
+		display: [ :aCollection | 
+			{('Week' -> self weekPrinting)}
+				,
+					(#(#weight #bmi #fat #fatFree #subcutaneousFat #visceralFat #water #skeletalMuscle #muscleMass #boneMass #protein #bmr #metabolicAge #fatWeight #subcuteanousFatWeight)
+						collect: [ :each | each -> (self average: each) ]) ];
+		column: 'Info' evaluated: [ :each | each key ];
+		column: 'Value'
+			evaluated: [ :each | 
+			each value isNumber
+				ifTrue: [ each value printShowingDecimalPlaces: 2 ]
+				ifFalse: [ each value ] ];
+		send: [ :result | result ]
+]
+
 { #category : #initialization }
 WeeklyWeight >> initialize [
 	super initialize.

@@ -11,7 +11,7 @@ Class {
 DiffColl class >> launch [
 	<script>
 	| weights weekly |
-	weights := FileLocator downloads / 'Renpho.csv'
+	weights := FileLocator downloads / 'Renpho-C.csv'
 		readStreamDo: [ :s | 
 			(NeoCSVReader on: s)
 				skipHeader;
@@ -63,11 +63,17 @@ DiffColl >> gtInspectorIn: composite [
 	^ composite fastTable
 		title: 'Diff';
 		display: [ :aCollection | 
-			(weeklyDiffs sort: [ :e | e week2 week ] ascending)
+			((weeklyDiffs sort: [ :e | e week2 week ] ascending)
+				add:
+					(WeeklyDiff new
+						week1: weeklyDiffs first week1;
+						week2: weeklyDiffs last week2;
+						yourself);
+				yourself)
 				collect: [ :week | 
 					{week weekPrinting}
 						,
-							(#(#weight #bmi #fat #fatFree #subcutaneousFat #visceralFat #water #skeletalMuscle #muscleMass #boneMass #protein #bmr #metabolicAge)
+							(#(#weight #bmi #fat #fatFree #subcutaneousFat #visceralFat #water #skeletalMuscle #muscleMass #boneMass #protein #bmr #metabolicAge #fatWeight #subcuteanousFatWeight)
 								collect: [ :each | week diffFor: each ]) ] ];
 		column: 'Date' evaluated: [ :each | each at: 1 ];
 		column: 'Weight' evaluated: [ :e | (e at: 2) printShowingDecimalPlaces: 2 ] width: 110;
@@ -83,6 +89,8 @@ DiffColl >> gtInspectorIn: composite [
 		column: 'Protein' evaluated: [ :e | (e at: 12) printShowingDecimalPlaces: 2 ] width: 110;
 		column: 'Bmr' evaluated: [ :e | (e at: 13) printShowingDecimalPlaces: 2 ] width: 110;
 		column: 'MetabolicAge' evaluated: [ :e | (e at: 14) printShowingDecimalPlaces: 2 ] width: 110;
+		column: 'FatWeight' evaluated: [ :e | (e at: 15) printShowingDecimalPlaces: 2 ] width: 110;
+		column: 'SubcFatWeight' evaluated: [ :e | (e at: 16) printShowingDecimalPlaces: 2 ] width: 110;
 		send: [ :result | result ]
 ]
 
