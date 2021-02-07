@@ -99,5 +99,6 @@ NSResolver >> on: aDOM [
 
 { #category : #'as yet unclassified' }
 NSResolver >> resolve [
-	NSAbstractSolver solvers do: [ :solver | solver resolve: self ] separatedBy: [ self isResolved ifTrue: [ 1halt ] ]
+	NSAbstractSolver solvers do: [ :solver | solver resolve: self ] separatedBy: [ self isResolved ifTrue: [ 1halt ] ].
+	1halt.
 ]

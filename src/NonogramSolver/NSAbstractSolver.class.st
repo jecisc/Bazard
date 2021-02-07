@@ -60,11 +60,21 @@ NSAbstractSolver >> numberOfLines [
 ]
 
 { #category : #resolving }
-NSAbstractSolver >> resolve: aResolver [
+NSAbstractSolver >> resolve [
 	self subclassResponsibility
 ]
 
 { #category : #accessing }
 NSAbstractSolver >> resolver: aNSResolver [ 
 	resolver := aNSResolver
+]
+
+{ #category : #resolve }
+NSAbstractSolver >> withUnfinishedColumnsDo: aBlock [
+	1 to: self numberOfColumns do: [ :columnIndex | (self columnIsAllKnown: columnIndex) ifFalse: [ aBlock value: columnIndex value: (self clueForColumn: columnIndex) ] ]
+]
+
+{ #category : #resolve }
+NSAbstractSolver >> withUnfinishedLinesDo: aBlock [
+	1 to: self numberOfLines do: [ :lineIndex | (self lineIsAllKnown: lineIndex) ifFalse: [ aBlock value: lineIndex value: (self clueForLine: lineIndex) ] ]
 ]
