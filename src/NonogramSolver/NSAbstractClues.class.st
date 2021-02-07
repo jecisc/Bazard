@@ -15,6 +15,11 @@ NSAbstractClues class >> buildFrom: aXMLElement [
 ]
 
 { #category : #accessing }
+NSAbstractClues >> at: anInteger [
+	^ clues at: anInteger
+]
+
+{ #category : #accessing }
 NSAbstractClues >> buildFrom: arg1 [ 
 	^ self subclassResponsibility
 ]

@@ -1,5 +1,5 @@
 Class {
-	#name : #NSSolver,
+	#name : #NSResolver,
 	#superclass : #Object,
 	#instVars : [
 		'horizontalClues',
@@ -10,14 +10,14 @@ Class {
 }
 
 { #category : #'instance creation' }
-NSSolver class >> on: aDOM [ 
+NSResolver class >> on: aDOM [ 
 	^ self new
 		on: aDOM;
 		resolve
 ]
 
 { #category : #'as yet unclassified' }
-NSSolver class >> scripts [
+NSResolver class >> scripts [
 	'const socket = new WebSocket("ws://localhost:1801");
 
 // Connection opened
@@ -43,8 +43,53 @@ ZnServer default delegate: (ZnWebSocketDelegate handler:
 '
 ]
 
+{ #category : #'as yet unclassified' }
+NSResolver >> at: anInteger at: anInteger2 put: aState [ 
+	grid at: anInteger at: anInteger2 put: aState 
+]
+
+{ #category : #accessing }
+NSResolver >> clueForColumn: columnIndex [
+	^ verticalClues at: columnIndex
+]
+
+{ #category : #accessing }
+NSResolver >> clueForLine: lineIndex [
+	^ horizontalClues at: lineIndex
+]
+
+{ #category : #testing }
+NSResolver >> columnIsAllKnown: columnIndex [ 
+	^ grid columnIsAllKnown: columnIndex
+]
+
+{ #category : #accessing }
+NSResolver >> grid [
+	^ grid
+]
+
+{ #category : #testing }
+NSResolver >> isResolved [
+	^ grid isResolved
+]
+
+{ #category : #testing }
+NSResolver >> lineIsAllKnown: lineIndex [ 
+	^ grid lineIsAllKnown: lineIndex
+]
+
+{ #category : #accessing }
+NSResolver >> numberOfColumns [
+	^ grid numberOfColumns
+]
+
+{ #category : #accessing }
+NSResolver >> numberOfLines [
+	^ grid numberOfLines
+]
+
 { #category : #initalize }
-NSSolver >> on: aDOM [ 
+NSResolver >> on: aDOM [ 
 	| document horizontalHTMLClues |
 	document := XMLHTMLParser parse: aDOM.
 	horizontalClues := NSHorizontalClues buildFrom: (document xPath: '//td[@class=''nmtt'']') anyOne.
@@ -53,6 +98,6 @@ NSSolver >> on: aDOM [
 ]
 
 { #category : #'as yet unclassified' }
-NSSolver >> resolve [
-	1halt.
+NSResolver >> resolve [
+	NSAbstractSolver solvers do: [ :solver | solver resolve: self ] separatedBy: [ self isResolved ifTrue: [ 1halt ] ]
 ]
