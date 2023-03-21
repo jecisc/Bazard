@@ -4,7 +4,7 @@ A PrefixTreeTest is a test class for testing the behavior of PrefixTree
 Class {
 	#name : #PrefixTreeTest,
 	#superclass : #TestCase,
-	#category : #'Collections-PrefixTree-Dictionaries-Tests'
+	#category : #'Collections-PrefixTree-Tests'
 }
 
 { #category : #tests }

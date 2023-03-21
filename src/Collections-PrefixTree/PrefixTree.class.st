@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'roots'
 	],
-	#category : #'Collections-PrefixTree-Dictionaries'
+	#category : #'Collections-PrefixTree'
 }
 
 { #category : #adding }
@@ -16,9 +16,11 @@ PrefixTree >> add: aString [
 
 { #category : #accessing }
 PrefixTree >> allWords [
-	| result|
-	result := OrderedCollection new.
-	^ self roots keys
+
+	| words |
+	words := OrderedCollection new.
+	self roots addAllWordsTo: words.
+	^ words
 ]
 
 { #category : #testing }
@@ -33,7 +35,7 @@ PrefixTree >> includes: aString [
 PrefixTree >> initialize [
 
 	super initialize.
-	self roots: TrieNode new
+	self roots: PrefixTreeNode new
 ]
 
 { #category : #accessing }
