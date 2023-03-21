@@ -1,5 +1,5 @@
 Class {
-	#name : #PrefixTree,
+	#name : #SymbolsTrie,
 	#superclass : #Object,
 	#instVars : [
 		'roots'
@@ -8,23 +8,23 @@ Class {
 }
 
 { #category : #adding }
-PrefixTree >> add: aString [
+SymbolsTrie >> add: aString [
 
 	aString ifEmpty: [ ^ self ].
 	self roots add: aString
 ]
 
 { #category : #accessing }
-PrefixTree >> allWords [
+SymbolsTrie >> allSymbols [
 
 	| words |
 	words := OrderedCollection new.
-	self roots addAllWordsTo: words.
+	self roots addAllSymbolsTo: words.
 	^ words
 ]
 
 { #category : #testing }
-PrefixTree >> includes: aString [
+SymbolsTrie >> includes: aString [
 
 	aString ifEmpty: [ self error: 'Cannot contain empty string' ].
 
@@ -32,18 +32,18 @@ PrefixTree >> includes: aString [
 ]
 
 { #category : #initialization }
-PrefixTree >> initialize [
+SymbolsTrie >> initialize [
 
 	super initialize.
-	self roots: PrefixTreeNode new
+	self roots: SymbolsTrieNode new
 ]
 
 { #category : #accessing }
-PrefixTree >> roots [
+SymbolsTrie >> roots [
 	^ roots
 ]
 
 { #category : #accessing }
-PrefixTree >> roots: anObject [
+SymbolsTrie >> roots: anObject [
 	roots := anObject
 ]

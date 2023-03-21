@@ -2,37 +2,37 @@
 A PrefixTreeTest is a test class for testing the behavior of PrefixTree
 "
 Class {
-	#name : #PrefixTreeTest,
+	#name : #SymbolsTrieTest,
 	#superclass : #TestCase,
 	#category : #'Collections-PrefixTree-Tests'
 }
 
 { #category : #tests }
-PrefixTreeTest >> testAdd [
+SymbolsTrieTest >> testAdd [
 
 	| tree |
-	tree := PrefixTree new.
+	tree := SymbolsTrie new.
 	tree add: 'test'.
 	self assert: (tree includes: 'test')
 ]
 
 { #category : #tests }
-PrefixTreeTest >> testAllWords [
+SymbolsTrieTest >> testAllSymbols [
 
 	| tree |
-	tree := PrefixTree new.
+	tree := SymbolsTrie new.
 	tree
 		add: 'test';
 		add: 'foo';
 		add: 'testons'.
-	self assertCollection: tree allWords hasSameElements: #( test foo testons )
+	self assertCollection: tree allSymbols hasSameElements: #( test foo testons )
 ]
 
 { #category : #tests }
-PrefixTreeTest >> testIncludes [
+SymbolsTrieTest >> testIncludes [
 
 	| tree |
-	tree := PrefixTree new.
+	tree := SymbolsTrie new.
 	tree
 		add: 'test';
 		add: 'foo';
