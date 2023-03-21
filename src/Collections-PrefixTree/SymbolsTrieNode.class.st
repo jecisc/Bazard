@@ -2,9 +2,9 @@ Class {
 	#name : #SymbolsTrieNode,
 	#superclass : #IdentityDictionary,
 	#instVars : [
-		'childrenNodes',
-		'parentNode',
-		'symbol'
+		'#childrenNodes',
+		'#parentNode',
+		'#symbol => WeakSlot'
 	],
 	#category : #'Collections-PrefixTree'
 }
@@ -49,6 +49,13 @@ SymbolsTrieNode >> includes: aString [
 	aString size = 1 ifTrue: [ ^ node isSymbol ].
 
 	^ node includes: aString allButFirst
+]
+
+{ #category : #initialization }
+SymbolsTrieNode >> initialize [
+
+	self class initializeSlots: self.
+	super initialize.
 ]
 
 { #category : #accessing }
