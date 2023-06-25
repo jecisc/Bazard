@@ -19,7 +19,7 @@ SystemEventPrinter class >> register [
 		when: PackageTagRenamed do: [ :ann | ('Package tag renamed: ' , ann tag name , ' in ' , ann package name) traceCr ] for: self;
 		when: CategoryAdded do: [ :ann | ('Category added: ' , ann categoryName) traceCr ] for: self;
 		when: CategoryRemoved do: [ :ann | ('Category removed ' , ann categoryName) traceCr ] for: self;
-		when: CategoryRenamed do: [ :ann | ('Category renamed: ' , ann categoryName) traceCr ] for: self.
+		when: CategoryRenamed do: [ :ann | ('Category renamed from: ' , ann oldCategoryName , ' to: ' , ann newCategoryName) traceCr ] for: self.
 
 	Transcript ensureOpen
 ]
