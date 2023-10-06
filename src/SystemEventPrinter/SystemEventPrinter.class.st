@@ -1,14 +1,15 @@
 Class {
-	#name : #SystemEventPrinter,
-	#superclass : #Object,
-	#category : #SystemEventPrinter
+	#name : 'SystemEventPrinter',
+	#superclass : 'Object',
+	#category : 'SystemEventPrinter',
+	#package : 'SystemEventPrinter'
 }
 
-{ #category : #'tools registry' }
+{ #category : 'tools registry' }
 SystemEventPrinter class >> register [
 
 	<script>
-	SystemAnnouncer uniqueInstance unsubscribe: self.
+	self unsubcribe.
 
 	SystemAnnouncer uniqueInstance
 		when: PackageAdded do: [ :ann | ('Package added: ' , ann package name) traceCr ] for: self;
@@ -19,7 +20,20 @@ SystemEventPrinter class >> register [
 		when: PackageTagRenamed do: [ :ann | ('Package tag renamed: ' , ann tag name , ' in ' , ann package name) traceCr ] for: self;
 		when: CategoryAdded do: [ :ann | ('Category added: ' , ann categoryName) traceCr ] for: self;
 		when: CategoryRemoved do: [ :ann | ('Category removed ' , ann categoryName) traceCr ] for: self;
-		when: CategoryRenamed do: [ :ann | ('Category renamed from: ' , ann oldCategoryName , ' to: ' , ann newCategoryName) traceCr ] for: self.
+		when: CategoryRenamed do: [ :ann | ('Category renamed from: ' , ann oldCategoryName , ' to: ' , ann newCategoryName) traceCr ] for: self;
+		when: ClassRecategorized
+		do: [ :ann | ('Category of: ' , ann classAffected name , ' changed from: ' , ann oldCategory , ' to: ' , ann newCategory) traceCr ]
+		for: self;
+		when: ClassRepackaged
+		do: [ :ann | ('Package tag of: ' , ann classAffected name , ' changed from: ' , ann oldCategory , ' to: ' , ann newCategory) traceCr ]
+		for: self.
 
 	Transcript ensureOpen
+]
+
+{ #category : 'tools registry' }
+SystemEventPrinter class >> unsubcribe [
+
+	<script>
+	SystemAnnouncer uniqueInstance unsubscribe: self
 ]

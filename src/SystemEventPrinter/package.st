@@ -1,1 +1,1 @@
-Package { #name : #SystemEventPrinter }
+Package { #name : 'SystemEventPrinter' }
