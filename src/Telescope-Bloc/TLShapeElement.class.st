@@ -22,3 +22,15 @@ TLShapeElement >> adaptToStylesheet: aTLStyleSheet forSimpleNode: aTLSimpleNode 
 	self flag: #todo. "I am not sure this should be here. Maybe we need to refactor the connector."
 	aTLStyleSheet applyBlocNodeStyleFor: aTLSimpleNode on: self
 ]
+
+{ #category : 'accessing' }
+TLShapeElement >> shape [
+
+	^ shape
+]
+
+{ #category : 'accessing' }
+TLShapeElement >> shape: anObject [
+
+	shape := anObject
+]
