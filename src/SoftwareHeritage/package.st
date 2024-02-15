@@ -1,1 +1,1 @@
-Package { #name : 'SoftwareHeritage' }
+Package { #name : #SoftwareHeritage }

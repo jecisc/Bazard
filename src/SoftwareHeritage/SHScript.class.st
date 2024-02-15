@@ -1,11 +1,10 @@
 Class {
-	#name : 'SHScript',
-	#superclass : 'Object',
-	#category : 'SoftwareHeritage',
-	#package : 'SoftwareHeritage'
+	#name : #SHScript,
+	#superclass : #Object,
+	#category : 'SoftwareHeritage'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 SHScript >> script [
 
 	| ppProjects origin latest |
