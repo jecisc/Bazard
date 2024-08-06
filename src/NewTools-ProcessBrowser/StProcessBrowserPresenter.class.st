@@ -18,6 +18,24 @@ StProcessBrowserPresenter class >> open [
 	^ self new open
 ]
 
+{ #category : 'initialization' }
+StProcessBrowserPresenter >> connectPresenters [
+
+	super connectPresenters.
+
+	processList transmitTo: stackList transform: [ :process | self stackForProcess: process ] postTransmission: [ :destination | destination selectFirst ].
+
+	stackList transmitTo: codePresenter transform: [ :context |
+		context
+			ifNil: [ '' ]
+			ifNotNil: [
+				[
+				codePresenter beForMethod: context method.
+				context sourceCode ] onErrorDo: [ 'error getting method text' ] ] ].
+
+	processList selectFirst
+]
+
 { #category : 'layout' }
 StProcessBrowserPresenter >> defaultLayout [
 
@@ -46,13 +64,14 @@ StProcessBrowserPresenter >> initializePresenters [
 	codePresenter := self newCode.
 
 	processList
-		items: (Process allSubInstances reject: [ :each | each isTerminated ]);
-		addColumn: ((SpStringTableColumn title: '????' evaluated: [ :process | 'Todo' ])
+		items: (Process allSubInstances reject: [ :process | process isTerminated ]);
+		sortingBlock: #priority descending;
+		addColumn: ((SpStringTableColumn title: 'Name' evaluated: [ :process | process name ])
 				 beSortable;
 				 yourself);
-		addColumn: ((SpStringTableColumn title: 'Priority' evaluated: [ :process | 1 ])
-				 sortFunction: #asNumber descending;
-				width: 100;
+		addColumn: ((SpStringTableColumn title: 'Priority' evaluated: [ :process | process priority ])
+				 sortFunction: #priority descending;
+				 width: 100;
 				 yourself)
 ]
 
@@ -63,4 +82,17 @@ StProcessBrowserPresenter >> initializeWindow: aWindowPresenter [
 	aWindowPresenter 
 		title: 'Process Browser';
 		initialExtent: 1000@600
+]
+
+{ #category : 'accessing - model' }
+StProcessBrowserPresenter >> selectedContext [
+	^ stackList selectedItem
+]
+
+{ #category : 'accessing' }
+StProcessBrowserPresenter >> stackForProcess: process [
+
+	^ process == Processor activeProcess
+		  ifTrue: [ thisContext stack ]
+		  ifFalse: [ process suspendedContext ifNotNil: [ :context | context stack ] ]
 ]
