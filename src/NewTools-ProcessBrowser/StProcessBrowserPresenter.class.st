@@ -92,6 +92,7 @@ StProcessBrowserPresenter >> selectedContext [
 { #category : 'accessing' }
 StProcessBrowserPresenter >> stackForProcess: process [
 
+	process ifNil: [ ^ Array empty ].
 	^ process == Processor activeProcess
 		  ifTrue: [ thisContext stack ]
 		  ifFalse: [ process suspendedContext ifNotNil: [ :context | context stack ] ]
