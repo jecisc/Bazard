@@ -64,10 +64,16 @@ StProcessBrowserPresenter >> initializePresenters [
 	codePresenter := self newCode.
 
 	processList
+		beResizable;
 		items: (Process allSubInstances reject: [ :process | process isTerminated ]);
 		sortingBlock: #priority descending;
 		addColumn: ((SpStringTableColumn title: 'Name' evaluated: [ :process | process name ])
 				 beSortable;
+				beExpandable;
+				 yourself);
+		addColumn: ((SpStringTableColumn title: 'Suspended context' evaluated: [ :process | process suspendedContext asString ])
+				 beSortable;
+				beExpandable;
 				 yourself);
 		addColumn: ((SpStringTableColumn title: 'Priority' evaluated: [ :process | process priority ])
 				 sortFunction: #priority descending;
@@ -81,7 +87,7 @@ StProcessBrowserPresenter >> initializeWindow: aWindowPresenter [
 	super initializeWindow: aWindowPresenter.
 	aWindowPresenter 
 		title: 'Process Browser';
-		initialExtent: 1000@600
+		initialExtent: 1400@800
 ]
 
 { #category : 'accessing - model' }
