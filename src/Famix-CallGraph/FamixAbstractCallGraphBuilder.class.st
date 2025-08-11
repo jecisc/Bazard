@@ -23,6 +23,12 @@ FamixAbstractCallGraphBuilder class >> entryPoints: aCollection [
 		  yourself
 ]
 
+{ #category : 'building' }
+FamixAbstractCallGraphBuilder >> build [
+
+	self subclassResponsibility
+]
+
 { #category : 'accessing' }
 FamixAbstractCallGraphBuilder >> entryPoints [
 
