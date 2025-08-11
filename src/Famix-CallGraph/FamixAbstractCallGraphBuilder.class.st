@@ -1,3 +1,6 @@
+"
+TODO: Check the browsers removed from Moose security: https://github.com/moosetechnology/Moose-Security/commit/9a4aaa2dade1789e01ce4c145e64ff06295ffa43
+"
 Class {
 	#name : 'FamixAbstractCallGraphBuilder',
 	#superclass : 'Object',
