@@ -23,8 +23,15 @@ FamixJavaClassHierarchyAnalysisCallGraphBuilder >> build [
 ]
 
 { #category : 'building' }
-FamixJavaClassHierarchyAnalysisCallGraphBuilder >> computeCallGraphOf: aNode [ 
-	1halt.
+FamixJavaClassHierarchyAnalysisCallGraphBuilder >> computeCallGraphOf: aNode [
+
+	aNode outgoingInvocations do: [ :invocation |
+			invocation receiver
+				ifNil: [ self flag: #todo "Check what to do" ]
+				ifNotNil: [
+						invocation receiver isStub
+							ifTrue: [ self flag: #todo "What to do?" ]
+							ifFalse: [ invocation receiver declaredType possibleRuntimeTypes do: [ :type | type halt ] ] ] ]
 ]
 
 { #category : 'initialization' }

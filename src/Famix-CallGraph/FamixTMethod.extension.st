@@ -7,5 +7,6 @@ FamixTMethod >> asCallGraphNode [
 	^ FamixCallGraphNode new
 		  methodName: self name;
 		  realMethod: self;
+		  kind: self parentType;
 		  yourself
 ]
